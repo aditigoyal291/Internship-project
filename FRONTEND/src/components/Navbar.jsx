@@ -15,7 +15,7 @@ const Navbar = () => {
     window.location.href = "/"; //  Redirect to login page
   };
   return (
-    <header className="bg-gray-700 py-4 px-4 sm:px-6 flex flex-wrap justify-between items-center">
+    <header className="bg-gray-700 py-4 px-4 sm:px-6 flex flex-wrap  justify-between items-center">
       <div className="flex items-center">
         <div className="text-blue-500 font-bold text-2xl sm:text-3xl flex items-center">
           <span className="text-blue-500 mr-2">

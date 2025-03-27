@@ -1,0 +1,122 @@
+[
+  {
+    "_id": { "$oid": "67d15e64228bf897e2f4ba0b" },
+    "companyId": "E002",
+    "name": "Mannan PLC",
+    "sector": "Healthcare",
+    "address": "24/49, Chauhan Circle, Lucknow - 651922",
+    "pincode": "651922",
+    "phone": "+91 7346390328",
+    "website": "loyal-setty.biz",
+    "founded": "1983",
+    "gst_number": "27AAAAA8233A1ZY"
+  },
+  {
+    "_id": { "$oid": "67d15e64228bf897e2f4ba10" },
+    "companyId": "E007",
+    "name": "Narasimhan, Iyer and Narasimhan",
+    "sector": "Infrastructure",
+    "address": "28, Bera Ganj, Ludhiana - 637659",
+    "pincode": "637659",
+    "phone": "+91 9337034775",
+    "website": "wable.com",
+    "founded": "2008",
+    "gst_number": "27AAAAA9293A1ZY"
+  },
+  {
+    "_id": { "$oid": "67d15e64228bf897e2f4ba0c" },
+    "companyId": "E003",
+    "name": "Chada LLC",
+    "sector": "Healthcare",
+    "address": "H.No. 27, D’Alia Chowk, Hyderabad - 394350",
+    "pincode": "394350",
+    "phone": "+91 7150830169",
+    "website": "dyal.net",
+    "founded": "1986",
+    "gst_number": "27AAAAA5519A1ZY"
+  },
+  {
+    "_id": { "$oid": "67d15e64228bf897e2f4ba0d" },
+    "companyId": "E004",
+    "name": "Barad-More",
+    "sector": "Telecom",
+    "address": "069, Hayer Nagar, Lucknow - 930752",
+    "pincode": "930752",
+    "phone": "+91 7319768404",
+    "website": "bhagat.com",
+    "founded": "1984",
+    "gst_number": "27AAAAA1106A1ZY"
+  },
+  {
+    "_id": { "$oid": "67d15e64228bf897e2f4ba12" },
+    "companyId": "E009",
+    "name": "Natarajan PLC",
+    "sector": "Textiles",
+    "address": "68/99, Date Chowk, Mumbai - 168447",
+    "pincode": "168447",
+    "phone": "+91 6547836401",
+    "website": "wason.com",
+    "founded": "2018",
+    "gst_number": "27AAAAA5156A1ZY"
+  },
+  {
+    "_id": { "$oid": "67d15e64228bf897e2f4ba0a" },
+    "companyId": "E001",
+    "name": "Bala-Gokhale",
+    "sector": "Steel",
+    "address": "H.No. 117, Biswas Chowk, Vadodara - 979095",
+    "pincode": "979095",
+    "phone": "+91 9277302686",
+    "website": "ghose-sathe.com",
+    "founded": "1998",
+    "gst_number": "27AAAAA1206A1ZY"
+  },
+  {
+    "_id": { "$oid": "67d15e64228bf897e2f4ba0e" },
+    "companyId": "E005",
+    "name": "Dey-Batta",
+    "sector": "E-commerce",
+    "address": "06/72, Rajan Chowk, Nagpur - 799042",
+    "pincode": "799042",
+    "phone": "+91 9363041640",
+    "website": "nagar.org",
+    "founded": "2008",
+    "gst_number": "27AAAAA6154A1ZY"
+  },
+  {
+    "_id": { "$oid": "67d15e64228bf897e2f4ba0f" },
+    "companyId": "E006",
+    "name": "Dar, Gara and Borah",
+    "sector": "IT Services",
+    "address": "87, Keer Ganj, Mumbai - 919914",
+    "pincode": "919914",
+    "phone": "+91 8398349444",
+    "website": "kurian-mody.com",
+    "founded": "1994",
+    "gst_number": "27AAAAA7392A1ZY"
+  },
+  {
+    "_id": { "$oid": "67d15e64228bf897e2f4ba11" },
+    "companyId": "E008",
+    "name": "Ben LLC",
+    "sector": "Energy",
+    "address": "93, Mann Nagar, Pune - 053236",
+    "pincode": "053236",
+    "phone": "+91 6598752173",
+    "website": "morar.com",
+    "founded": "1984",
+    "gst_number": "27AAAAA5798A1ZY"
+  },
+  {
+    "_id": { "$oid": "67d15e64228bf897e2f4ba13" },
+    "companyId": "E010",
+    "name": "Ratta-Vig",
+    "sector": "Agriculture",
+    "address": "32/88, Banik Path, Hyderabad - 900341",
+    "pincode": "900341",
+    "phone": "+91 6923960778",
+    "website": "gour-joshi.net",
+    "founded": "1979",
+    "gst_number": "27AAAAA9307A1ZY"
+  }
+]

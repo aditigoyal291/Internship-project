@@ -30,7 +30,7 @@ public class GraphServiceImpl implements GraphService {
     @Override
     public GraphDataDto getFullGraph() {
         // Convert Collection to List using new ArrayList<>()
-        Collection<Map<String, Object>> resultCollection = neo4jClient.query("MATCH (n)-[r]->(m) RETURN n, r, m LIMIT 100")
+        Collection<Map<String, Object>> resultCollection = neo4jClient.query("MATCH (n)-[r]->(m) RETURN n, r, m LIMIT 300 ")
                 .fetch()
                 .all();
 

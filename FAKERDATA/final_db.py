@@ -171,7 +171,7 @@ primary_applicant_ids = []
 primary_applicant_data = []
 
 # Use the first 30 people as primary applicants
-for i in range(20):
+for i in range(40):
     # Generate timestamps
     created_at = generate_created_at()
     updated_at = generate_updated_at(created_at)

@@ -1,0 +1,66 @@
+# collections.yaml
+mongodb:
+  connection_string: mongodb+srv://chinthanamj:Contact1234@cluster0.dttff.mongodb.net/
+  database: Plan5
+
+neo4j:
+  uri: bolt://localhost:7687
+  username: neo4j
+  password: password
+
+sync_config:
+  interval_seconds: 300 # 5 minutes
+  collections:
+    - name: PrimaryApplicant
+      mongo_collection: PrimaryApplicant
+      neo4j_node_label: PrimaryApplicant
+      unique_field: primaryApplicantId
+      last_sync_field: updatedAt
+      transform:
+        - field: password
+          action: remove
+
+    - name: Coapplicant
+      mongo_collection: Coapplicant
+      neo4j_node_label: Coapplicant
+      unique_field: coapplicantId
+      last_sync_field: updatedAt
+      transform:
+        - field: internal_notes
+          action: remove
+
+    - name: Company
+      mongo_collection: Company
+      neo4j_node_label: Company
+      unique_field: companyId
+      last_sync_field: updatedAt
+      transform:
+        - field: company_name
+          action: anonymize
+
+    - name: Loan
+      mongo_collection: Loan
+      neo4j_node_label: Loan
+      unique_field: loanId
+      last_sync_field: updatedAt
+      transform:
+        - field: LoanAmount
+          action: anonymize
+
+    - name: Person
+      mongo_collection: Person
+      neo4j_node_label: Person
+      unique_field: personId
+      last_sync_field: updatedAt
+      transform:
+        - field: person_name
+          action: anonymize
+
+    - name: Reference
+      mongo_collection: Reference
+      neo4j_node_label: Reference
+      unique_field: referenceId
+      last_sync_field: updatedAt
+      transform:
+        - field: reference_name
+          action: anonymize

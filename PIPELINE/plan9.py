@@ -23,7 +23,7 @@ findspark.init()
 
 MONGO_URI = "mongodb://localhost:27017/"
 DB_NAME = "Tester_mongo_flower"
-SYNC_MINUTES_LOOKBACK = 5 
+SYNC_MINUTES_LOOKBACK = 120000000
 
 def setup_spark():
     """Create and return a SparkSession with MongoDB connector"""
@@ -92,7 +92,7 @@ def is_neo4j_empty():
 
 spark = setup_spark()
 # Neo4j connection
-graph = Graph("neo4j+s://777ec9b0.databases.neo4j.io", auth=("neo4j", "FS6tHo-z4_AV4LPIKhH7wLyoxvVF35TMcXuCEtqnp0k"))  # Update with your Neo4j credentials
+graph = Graph("bolt://localhost:7687", auth=("neo4j", "password"))  # Update with your Neo4j credentials
 
 # Create constraints for unique IDs if they don't exist yet
 def create_constraints():
@@ -532,59 +532,6 @@ def save_sync_timestamp(timestamp=None):
     except Exception as e:
         logger.error(f"Error processing sync timestamp: {str(e)}")
 
-# Execute the pipeline
-# def run_pipeline():
-    # try:
-    #     # Create Neo4j constraints if they don't exist
-    #     create_constraints()
-
-    #     debug_mongo_timestamps("Person")
-        
-    #     # Get the last sync timestamp
-    #     last_sync_timestamp = get_last_sync_timestamp()
-    #     logger.info(f"Starting sync for data updated after: {last_sync_timestamp}")
-        
-    #     # Read data from MongoDB that has been updated since the last sync
-    #     dataframes = read_filtered_collections(last_sync_timestamp)
-        
-    #     # If any collection has no updates, log and continue
-    #     has_updates = False
-    #     for collection, df in dataframes.items():
-    #         count = df.count()
-    #         logger.info(f"Collection {collection}: {count} records to sync")
-    #         if count > 0:
-    #             has_updates = True
-        
-    #     if not has_updates:
-    #         logger.info("No updates found since last sync. Nothing to update, waiting for next run.")
-    #         return False
-        
-    #     # Upsert nodes and track the latest timestamp
-    #     logger.info("Upserting nodes...")
-    #     node_latest_timestamp = upsert_nodes(dataframes)
-        
-    #     logger.info("Ensuring PAN mapping...")
-    #     ensure_pan_mapping(dataframes)
-        
-    #     logger.info("Upserting relationships...")
-    #     rel_latest_timestamp = upsert_relationships(dataframes)
-        
-    #     # Determine the latest timestamp overall
-    #     latest_timestamp = node_latest_timestamp
-    #     if rel_latest_timestamp and (not latest_timestamp or rel_latest_timestamp > latest_timestamp):
-    #         latest_timestamp = rel_latest_timestamp
-        
-    #     # Save the latest timestamp for next sync
-    #     if latest_timestamp:
-    #         save_sync_timestamp(latest_timestamp)
-    #     else:
-    #         save_sync_timestamp()  # Use current time if no timestamp found
-        
-    #     logger.info("Pipeline completed successfully!")
-    #     return True
-    # except Exception as e:
-    #     logger.error(f"Pipeline execution error: {str(e)}", exc_info=True)
-    #     return False
 
 def run_pipeline():
         try:
@@ -595,7 +542,7 @@ def run_pipeline():
             if is_neo4j_empty():
                 logger.info("Neo4j database appears to be empty. Performing full sync...")
                 
-                # Read all data from MongoDB
+                # Read alldata from MongoDB
                 dataframes = read_all_collections()
                 
                 logger.info("Starting full data sync to Neo4j...")
